@@ -9,7 +9,7 @@ const CartItem = ({ cartItem }) => {
   return (
     <div className='flex gap-4 mb-4'>
       <div className='w-2/3 flex items-start gap-2.5'>
-        <img className='w-3.5 relative top-[3px]' src={isVeg ? veg : nonVeg} />
+        <img className='w-3.5 relative top-[3px]' src={isVeg ? veg : nonVeg} alt='' />
         <span className='text-sm'>{name}</span>
       </div>
 

@@ -44,7 +44,7 @@ const Cart = ({ cartItems }) => {
     <div className='bg-white w-2/5 max-h-[520px] flex flex-col justify-between'>
       <Link to={`/restaurants/${id}`}>
         <div className='px-6 py-4 flex gap-4' id='cart-header'>
-          <img className='h-14 w-14' src={CART_IMAGE_URL + cloudinaryImageId} />
+          <img className='h-14 w-14' src={CART_IMAGE_URL + cloudinaryImageId} alt='' />
 
           <div className='relative'>
             <h3 className='font-medium'>{name}</h3>

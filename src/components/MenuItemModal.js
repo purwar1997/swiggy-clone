@@ -34,11 +34,12 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
         <img
           className='w-full h-80 rounded-xl object-cover object-center'
           src={MENU_ITEM_MODAL_IMAGE_URL + imageId}
+          alt=''
         />
 
         <div className='mt-4 flex justify-between items-start'>
           <div className='w-2/3'>
-            <img className='h-4' src={isVeg ? veg : nonVeg} />
+            <img className='h-4' src={isVeg ? veg : nonVeg} alt='' />
             <h4 className='mt-1 text-lg font-medium truncate'>{name}</h4>
             <p>₹{(price || defaultPrice) / 100}</p>
           </div>

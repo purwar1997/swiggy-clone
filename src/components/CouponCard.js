@@ -16,7 +16,7 @@ const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCoupon
   return (
     <div className='p-7 border-b border-dashed border-gray-300 last:border-none flex flex-col items-start gap-5'>
       <div className='flex items-center gap-3 bg-lightOrange px-3 py-1.5 border border-gray-300'>
-        <img className='w-5' src={DEFAULT_OFFER_LOGO_URL} />
+        <img className='w-5' src={DEFAULT_OFFER_LOGO_URL} alt='' />
         <span>{couponCode.split(' ')[1]}</span>
       </div>
 

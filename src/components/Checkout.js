@@ -12,7 +12,7 @@ const Checkout = () => {
     dispatch(setPath('/checkout'));
 
     return () => dispatch(setPath(window.location.pathname));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className='px-24 py-10 bg-gray-100 flex justify-center items-center'>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme } from '../utils/themeSlice';
+import { useSelector } from 'react-redux';
 import logo from '../assets/logo.png';
 import CartHoverCard from './CartHoverCard';
 import EmptyCartHoverCard from './EmptyCartHoverCard';
@@ -11,9 +10,6 @@ const Header = () => {
 
   const cart = useSelector(store => store.cart);
   const path = useSelector(store => store.path);
-  const userInfo = useSelector(store => store.user);
-  const appTheme = useSelector(store => store.theme);
-  const dispatch = useDispatch();
 
   const closeCartCard = () => setCartHover(false);
 
@@ -35,35 +31,11 @@ const Header = () => {
         </NavLink>
 
         <NavLink
-          to='about'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
-        >
-          About
-        </NavLink>
-
-        <NavLink
           to='search'
           className='flex items-center hover:text-orange'
           style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
         >
           Search
-        </NavLink>
-
-        <NavLink
-          to='grocery'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
-        >
-          Grocery
-        </NavLink>
-
-        <NavLink
-          to='instamart'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
-        >
-          Instamart
         </NavLink>
 
         {path !== '/checkout' && (
@@ -84,15 +56,6 @@ const Header = () => {
               ))}
           </NavLink>
         )}
-
-        {userInfo.name && <li className='list-none flex items-center'>{userInfo.name}</li>}
-
-        <li
-          className='list-none capitalize cursor-pointer flex items-center'
-          onClick={() => dispatch(toggleTheme())}
-        >
-          {appTheme} theme
-        </li>
       </nav>
     </header>
   );

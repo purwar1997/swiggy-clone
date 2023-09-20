@@ -6,7 +6,7 @@ const CouponAppliedModal = ({ couponCode, setOpenCouponModal }) => {
     <div className='modal-background' onClick={event => closeModal(event, setOpenCouponModal)}>
       <div className='w-96 bg-white rounded-md'>
         <div className='flex flex-col items-center gap-5 px-10 pt-16 pb-6 relative'>
-          <img className='w-20 absolute -top-9' src={COUPON_MODAL_IMAGE_URL} />
+          <img className='w-20 absolute -top-9' src={COUPON_MODAL_IMAGE_URL} alt='' />
 
           <h2 className='text-lg font-medium uppercase'>'{couponCode}' Applied</h2>
 
