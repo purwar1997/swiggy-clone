@@ -8,10 +8,10 @@ import {
 import AppLayout from './components/AppLayout';
 import Home from './components/Home';
 import Search from './components/Search';
-import Error from './components/Error';
-import NotFound from './components/NotFound';
 import Restaurant from './components/Restaurant';
 import Checkout from './components/Checkout';
+import Error from './components/Error';
+import NotFound from './components/NotFound';
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import useOnlineStatus from '../utils/useOnlineStatus';

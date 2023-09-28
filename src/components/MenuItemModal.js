@@ -34,7 +34,7 @@ const MenuItemModal = ({ menuItem, setIsModalOpen }) => {
         <img
           className='w-full h-80 rounded-xl object-cover object-center'
           src={MENU_ITEM_MODAL_IMAGE_URL + imageId}
-          alt=''
+          alt='menu-item'
         />
 
         <div className='mt-4 flex justify-between items-start'>

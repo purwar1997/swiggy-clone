@@ -19,7 +19,7 @@ const CartHoverCard = ({ cartItems, closeCartCard }) => {
       onClick={handleClick}
     >
       <div className='flex gap-4 pb-5 border-b border-gray-300'>
-        <img className='h-16 w-16' src={CART_HOVER_CARD_IMAGE_URL + cloudinaryImageId} alt=''/>
+        <img className='h-16 w-16' src={CART_HOVER_CARD_IMAGE_URL + cloudinaryImageId} alt='' />
 
         <div>
           <h3 className='font-medium'>{name}</h3>

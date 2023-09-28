@@ -3,20 +3,20 @@ import { AiOutlinePlus } from 'react-icons/ai';
 import { openModal } from '../utils/helpers';
 import { DEFAULT_OFFER_LOGO_URL } from '../utils/constants';
 
-const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCouponList }) => {
+const CouponCard = ({ couponInfo, setCouponCode, setOpenCouponModal, closeCouponDrawer }) => {
   const [showMore, setShowMore] = useState(false);
   const { couponCode, header, description } = couponInfo;
 
   const applyCoupon = couponCode => {
     setCouponCode(couponCode);
-    closeCouponList();
+    closeCouponDrawer();
     openModal(setOpenCouponModal);
   };
 
   return (
     <div className='p-7 border-b border-dashed border-gray-300 last:border-none flex flex-col items-start gap-5'>
       <div className='flex items-center gap-3 bg-lightOrange px-3 py-1.5 border border-gray-300'>
-        <img className='w-5' src={DEFAULT_OFFER_LOGO_URL} alt='' />
+        <img className='w-5' src={DEFAULT_OFFER_LOGO_URL} alt='offer-logo'/>
         <span>{couponCode.split(' ')[1]}</span>
       </div>
 

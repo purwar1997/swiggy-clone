@@ -46,7 +46,7 @@ const MenuItem = ({ menuItem }) => {
       }`}
     >
       <div className='w-3/4'>
-        <img className='w-4' src={isVeg ? veg : nonVeg} />
+        <img className='w-4' src={isVeg ? veg : nonVeg} alt=''/>
         <h4 className='mt-2 font-medium'>{name}</h4>
         <p className='mt-1'>₹{(price || defaultPrice) / 100}</p>
         <p className='mt-2 text-gray-600'>{description}</p>

@@ -34,6 +34,23 @@ const RestaurantCard = ({ restaurantData, isTopRated, isPromoted }) => {
 
 export default RestaurantCard;
 
+// Higher Order Components are functions which accepts component as an argument and returns a new component
+// Component returned by HOC is actually a wrapper around original component that was passed inside it
+// HOC should be pure functions which means they shouldn't modify the input component
+
+export const topRatedRestaurant = Restaurant => {
+  return props => {
+    return (
+      <div className='relative hover:scale-95 transition-transform'>
+        <label className='absolute pl-3 pr-2 py-0.5 text-sm text-white bg-green rounded-tl-xl z-10'>
+          Top Rated
+        </label>
+        <Restaurant {...props} isTopRated={true} />
+      </div>
+    );
+  };
+};
+
 export const promotedRestaurant = Restaurant => {
   return props => {
     return (

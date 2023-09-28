@@ -28,7 +28,7 @@ const TopPicksCarousel = ({ topPicks }) => {
         )}
       </div>
 
-      <div id='top-picks-carousel' className='mt-6 flex gap-10 overflow-x-hidden scroll-smooth'>
+      <div className='mt-6 flex gap-10 overflow-x-hidden scroll-smooth' id='top-picks-carousel'>
         {topPicks.map((topPickItem, index) => (
           <TopPickCard key={index} topPick={topPickItem} />
         ))}

@@ -5,9 +5,7 @@ import RestaurantCard, { promotedRestaurant } from './RestaurantCard';
 import Shimmer from './Shimmer';
 
 const Home = () => {
-  const [search, setSearch] = useState('');
   const [displayedRestaurants, setDisplayedRestaurants] = useState(null);
-
   const restaurants = useFetchRestaurants();
 
   if (restaurants.length === 0) {
@@ -20,27 +18,27 @@ const Home = () => {
 
   const PromotedRestaurantCard = promotedRestaurant(RestaurantCard);
 
-  const searchRestaurants = () => {
-    const searchString = search.trim().toLowerCase();
+  // const searchRestaurants = () => {
+  //   const searchString = search.trim().toLowerCase();
 
-    let searchResults = restaurants.filter(restaurant => {
-      const { name, cuisines } = restaurant?.info;
+  //   let searchResults = restaurants.filter(restaurant => {
+  //     const { name, cuisines } = restaurant?.info;
 
-      return (
-        name.toLowerCase().includes(searchString) ||
-        cuisines.map(cuisine => cuisine.toLowerCase()).includes(searchString)
-      );
-    });
+  //     return (
+  //       name.toLowerCase().includes(searchString) ||
+  //       cuisines.map(cuisine => cuisine.toLowerCase()).includes(searchString)
+  //     );
+  //   });
 
-    setDisplayedRestaurants(searchResults);
-  };
+  //   setDisplayedRestaurants(searchResults);
+  // };
 
-  const filterTopRatedRestuarants = () =>
-    setDisplayedRestaurants(
-      restaurants
-        .filter(restaurant => restaurant?.info?.avgRating > 4.0)
-        .sort((res1, res2) => res2.info.avgRating - res1.info.avgRating)
-    );
+  // const filterTopRatedRestuarants = () =>
+  //   setDisplayedRestaurants(
+  //     restaurants
+  //       .filter(restaurant => restaurant?.info?.avgRating > 4.0)
+  //       .sort((res1, res2) => res2.info.avgRating - res1.info.avgRating)
+  //   );
 
   return (
     <div className='px-24 py-12'>

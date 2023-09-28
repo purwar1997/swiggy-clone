@@ -8,7 +8,7 @@ const CartHoverCardItem = ({ cartItem }) => {
   return (
     <div className='flex justify-between gap-5 text-sm'>
       <div className='w-3/4 flex items-start gap-2.5'>
-        <img className='w-3.5 relative top-[3px]' src={isVeg ? veg : nonVeg} />
+        <img className='w-3.5 relative top-[3px]' src={isVeg ? veg : nonVeg} alt='' />
         <h4 className='text-black'>
           {name} x {quantity}
         </h4>

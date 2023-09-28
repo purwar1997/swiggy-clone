@@ -7,7 +7,6 @@ import EmptyCartHoverCard from './EmptyCartHoverCard';
 
 const Header = () => {
   const [cartHover, setCartHover] = useState(false);
-
   const cart = useSelector(store => store.cart);
   const path = useSelector(store => store.path);
 
@@ -24,16 +23,16 @@ const Header = () => {
       <nav className='flex gap-10'>
         <NavLink
           to='/'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Home
         </NavLink>
 
         <NavLink
           to='search'
-          className='flex items-center hover:text-orange'
-          style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+          className={`flex items-center hover:text-orange ${({ isActive }) =>
+            isActive ? 'active' : ''}`}
         >
           Search
         </NavLink>
@@ -41,8 +40,8 @@ const Header = () => {
         {path !== '/checkout' && (
           <NavLink
             to='checkout'
-            className='flex items-center hover:text-orange relative'
-            style={({ isActive }) => ({ color: isActive ? '#FC8019' : '' })}
+            className={`flex items-center hover:text-orange relative ${({ isActive }) =>
+              isActive ? 'active' : ''}`}
             onMouseOver={() => setCartHover(true)}
             onMouseLeave={closeCartCard}
             onClick={closeCartCard}

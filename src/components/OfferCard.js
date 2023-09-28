@@ -16,7 +16,7 @@ const OfferCard = ({ offer }) => {
         onClick={() => openModal(setIsModalOpen)}
       >
         <div className='flex items-center gap-2.5'>
-          <img className='w-5' src={logoUrl} alt='' />
+          <img className='w-5' src={logoUrl} alt='offer-logo'/>
           <h4 className='font-medium truncate'>{header}</h4>
         </div>
 
